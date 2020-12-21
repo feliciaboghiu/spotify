@@ -7,6 +7,7 @@ export default class RedirectPage extends React.Component {
     const { setExpiryTime, history, location } = this.props;
     try {
       if (_.isEmpty(location.hash)) {
+        setExpiryTime(expiryTime);
         return history.push('/dashboard');
       }
 
